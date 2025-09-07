@@ -64,4 +64,76 @@
         
         li.event-card:hover {
             transform: translateY(-5px); /* 少し浮き上がる効果 */
-            box-shadow
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        /* 予定のタイトル */
+        .event-card h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .event-card h2 a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .event-card h2 a:hover {
+            color: #007bff; /* ホバー時に青色に */
+        }
+        
+        /* 時間表示 */
+        .time-info {
+            display: flex;
+            align-items: center;
+            color: #555;
+            font-size: 1em;
+        }
+        
+        .time-info .fa-clock {
+            color: #1a237e; /* アイコンの色をタイトルと合わせる */
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Travel Information Day3</h1>
+        </div>
+        
+        <ul>
+            <li class="event-card">
+                <h2><a href="https://www-city-rikuzentakata-iwate-jp.translate.goog/kosodate_kyoiku_bunka/shogaigakushu/7330.html?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja" target="_blank">City Museum - Kamome and Mural</a></h2>
+                <div class="time-info">
+                    <i class="fa-solid fa-clock"></i> <span>Time: 11:30 AM</span>
+                </div>
+            </li>
+            <li class="event-card">
+                <h2><a href="https://watami-organic.jp/blog/en" target="_blank">Watami Organic Land</a></h2>
+                <div class="time-info">
+                    <i class="fa-solid fa-clock"></i> <span>Time: 1:00 PM</span>
+                </div>
+            </li>
+            <li class="event-card">
+                <h2><a href="https://iwate-tsunami-memorial.jp/en/index.html" target="_blank">Tsunami Memorial Park</a></h2>
+                <div class="time-info">
+                    <i class="fa-solid fa-clock"></i> <span>Time: 2:15 PM</span>
+                </div>
+            </li>
+            <li class="event-card">
+                <h2><a href="https://capitalhotel1000.jp/en/" target="_blank">Capital Hotel 100</a></h2>
+                <div class="time-info">
+                    <i class="fa-solid fa-clock"></i> <span>Time: 5:00 PM</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
