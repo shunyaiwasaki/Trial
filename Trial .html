@@ -3,58 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>旅行しおり</title>
+    <title>Travel Information Day3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
+        /* 基本設定 */
         body {
-            font-family: sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background-color: #fff;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f0f2f5; /* 少し青みがかった背景色 */
+            margin: 0;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
+
+        /* 全体を囲むコンテナ */
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* ヘッダー部分 */
+        .header {
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #1a237e; /* 落ち着いた紺色 */
+            font-weight: 700;
+            font-size: 2.2em;
+            margin: 0;
+        }
+
+        /* 予定リスト */
         ul {
             list-style: none;
             padding: 0;
         }
-        li {
+
+        /* 各予定カード */
+        li.event-card {
+            background-color: #f8f9fa; /* カードの背景色 */
+            border-radius: 10px;
+            padding: 20px;
             margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        h2 {
+        
+        li.event-card:hover {
+            transform: translateY(-5px); /* 少し浮き上がる効果 */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        /* 予定のタイトル */
+        .event-card h2 {
             margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .event-card h2 a {
             color: #333;
-        }
-        p {
-            margin: 5px 0;
-            color: #666;
-        }
-        a {
-            color: #007bff;
             text-decoration: none;
+            transition: color 0.2s ease;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .event-card h2 a:hover {
+            color: #007bff; /* ホバー時に青色に */
         }
+        
+        /* 時間表示 */
+        .time-info {
+            display: flex;
+            align-items: center;
+            color: #555;
+            font-size: 1em;
+        }
+        
+        .time-info .fa-clock {
+            color: #1a237e; /* アイコンの色をタイトルと合わせる */
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>旅行しおり</h1>
+        <div class="header">
+            <h1>Travel Information Day3</h1>
+        </div>
         
         <ul>
-            <li>
-                <h2><a href="https://www-city-rikuzentakata-iwate-jp.translate.goog/kosodate_kyoiku_bunka/shogaigakushu/7330.html?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja" target="_blank">City Museum-“Seagulls and Art”</a></h2>
-                <p>時間：11:30 AM</p>
+            <li class="event-card">
+                <h2><a href="https://www-city-rikuzentakata-iwate-jp.translate.goog/kosodate_kyoiku_bunka/shogaigakushu/7330.html?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja" target="_blank">City Museum - “Seagulls and Art”</a></h2>
+                <div class="time-info">
+                    <i class="fa-solid fa-clock"></i> <span>Time: 11:30 AM</span>
+                </div>
             </li>
-            <li>
+            <li class="event-card">
                 <h2><a href="https://watami-organic.jp/blog/en" target="_blank">Watami Organic Land</a></h2>
-                <p>時間：1:00 PM</p>
+                <div class="time-info">
+                    <i class="fa-solid fa-clock"></i> <span>Time: 1:00 PM</span>
+                </div>
             </li>
         </ul>
     </div>
